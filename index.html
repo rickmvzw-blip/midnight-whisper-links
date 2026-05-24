@@ -1,279 +1,212 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Midnight Whisper Hour — Horror</title>
-<meta name="description" content="Original horror short films and Shorts series. New episodes every week. FRAGMENTS: Lost in Fear — Halloween finale 2026." />
-<meta name="theme-color" content="#0a0c10" />
-<meta property="og:title" content="Midnight Whisper Hour — Horror" />
-<meta property="og:description" content="FRAGMENTS: Lost in Fear — Episode 1 out now. New fragment every month. Finale on Halloween." />
-<meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230a0c10'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Helvetica' font-weight='700' font-size='40' fill='%23e0d4b0'%3EF%3C/text%3E%3C/svg%3E" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midnight Whisper Hour — links</title>
+<meta name="description" content="horror that whispers, not screams. FRAGMENTS — a 6-episode horror series. monthly drops, Halloween finale.">
+<meta property="og:title" content="Midnight Whisper Hour">
+<meta property="og:description" content="horror that whispers, not screams.">
+<meta property="og:type" content="website">
 <style>
   :root {
-    --bg: #07080b;
-    --bg-card: #0e1015;
-    --bg-card-hover: #161821;
-    --ink: #e8e5dc;
-    --ink-dim: #8a8a90;
-    --accent: #d44343;       /* clock red */
-    --cream: #f0e8c8;        /* FRAGMENTS title cream */
-    --teal: #7fa8a8;
-    --border: rgba(255,255,255,0.06);
+    --bg: #0b0b0d;
+    --bg2: #15151a;
+    --text: #f1ece1;
+    --muted: #8a8377;
+    --accent: #e8d4a8;
+    --blood: #6e1f1f;
+    --line: #2a2a30;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-  body {
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Cormorant Garamond", Georgia, serif;
     min-height: 100vh;
+  }
+  body {
     background:
-      radial-gradient(ellipse at 50% -10%, rgba(212,67,67,0.06) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 110%, rgba(127,168,168,0.04) 0%, transparent 50%),
-      var(--bg);
+      radial-gradient(circle at 50% 0%, #1a1418 0%, var(--bg) 60%),
+      linear-gradient(180deg, #0b0b0d 0%, #07070a 100%);
     background-attachment: fixed;
   }
   .wrap {
-    max-width: 520px;
+    max-width: 460px;
     margin: 0 auto;
-    padding: 56px 22px 80px;
-  }
-  /* ---- Header / brand ---- */
-  .brand-tag {
+    padding: 48px 22px 80px;
     text-align: center;
-    font-size: 11px;
+  }
+  .brand {
+    font-size: 22px;
     letter-spacing: 0.32em;
-    color: var(--ink-dim);
+    text-transform: uppercase;
+    color: var(--text);
+    opacity: 0.92;
+    margin: 0 0 6px;
+    font-weight: 300;
+  }
+  .tagline {
+    font-style: italic;
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 36px;
+    letter-spacing: 0.04em;
+  }
+  .next-drop {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 0 0 30px;
+    background: rgba(232,212,168,0.04);
+  }
+  .next-drop .label {
+    font-size: 10px;
+    letter-spacing: 0.34em;
+    color: var(--accent);
     text-transform: uppercase;
     margin-bottom: 6px;
   }
-  .brand {
-    text-align: center;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    letter-spacing: 0.14em;
-    color: var(--ink);
-    margin: 0 0 4px;
+  .next-drop .ep {
+    font-size: 18px;
+    color: var(--text);
+    letter-spacing: 0.03em;
   }
-  .brand .dot { color: var(--accent); }
-  .strap {
-    text-align: center;
-    font-size: 12px;
-    color: var(--ink-dim);
-    margin-bottom: 36px;
-    letter-spacing: 0.04em;
-  }
-  /* ---- Feature card ---- */
-  .feature {
-    background: linear-gradient(180deg, #14161d 0%, #0c0e13 100%);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 28px;
-    box-shadow: 0 30px 60px -30px rgba(0,0,0,0.7);
-  }
-  .feature .meta {
-    padding: 16px 18px 6px;
-    font-size: 11px;
-    letter-spacing: 0.28em;
-    color: var(--accent);
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  .feature h2 {
-    margin: 0 18px 4px;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    letter-spacing: 0.04em;
-    color: var(--cream);
-    line-height: 1.05;
-  }
-  .feature .sub {
-    margin: 0 18px 8px;
+  .next-drop .when {
     font-size: 13px;
-    color: var(--teal);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 2px;
   }
-  .feature .ep {
-    margin: 0 18px 14px;
-    font-size: 15px;
-    color: var(--ink);
-    opacity: 0.86;
-  }
-  .feature .cta {
+  a.btn {
     display: block;
-    margin: 12px 14px 16px;
-    padding: 14px 18px;
-    background: var(--accent);
-    color: #fff;
-    text-align: center;
-    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--text);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: 0.04em;
-    transition: transform .12s ease, background .12s ease;
+    transition: all 0.2s ease;
+    position: relative;
   }
-  .feature .cta:hover { background: #b83232; transform: translateY(-1px); }
-  /* ---- Section heading ---- */
-  .section-h {
+  a.btn:hover {
+    background: rgba(232,212,168,0.08);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  a.btn.primary {
+    background: rgba(110,31,31,0.18);
+    border-color: var(--blood);
+    color: var(--accent);
+  }
+  a.btn.primary:hover {
+    background: rgba(110,31,31,0.32);
+    border-color: var(--accent);
+  }
+  a.btn .small {
+    display: block;
     font-size: 11px;
-    letter-spacing: 0.32em;
-    color: var(--ink-dim);
+    color: var(--muted);
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin: 32px 4px 12px;
-    font-weight: 600;
+    margin-bottom: 4px;
   }
-  /* ---- Link list ---- */
-  .links { display: flex; flex-direction: column; gap: 10px; }
-  .link {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    color: var(--ink);
-    text-decoration: none;
-    transition: background .12s ease, transform .12s ease, border-color .12s ease;
-  }
-  .link:hover { background: var(--bg-card-hover); border-color: rgba(255,255,255,0.12); transform: translateY(-1px); }
-  .link .ico {
-    width: 28px; height: 28px; flex: 0 0 28px;
-    display: inline-flex; align-items: center; justify-content: center;
-    border-radius: 6px;
-    background: rgba(255,255,255,0.04);
-    font-size: 14px;
-    color: var(--cream);
-  }
-  .link .copy { flex: 1; line-height: 1.25; }
-  .link .copy .t { font-size: 14.5px; font-weight: 600; color: var(--ink); }
-  .link .copy .d { font-size: 12px; color: var(--ink-dim); margin-top: 2px; }
-  .link .arr { color: var(--ink-dim); font-size: 14px; }
-  /* ---- Episode schedule ---- */
-  .schedule { display: flex; flex-direction: column; gap: 6px; }
-  .ep-row {
-    display: flex; align-items: baseline; gap: 12px;
-    padding: 10px 14px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    font-size: 13px;
-  }
-  .ep-row .num { color: var(--accent); font-weight: 700; min-width: 38px; }
-  .ep-row .name { color: var(--ink); flex: 1; }
-  .ep-row .when { color: var(--ink-dim); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; }
-  .ep-row.live { border-color: rgba(212,67,67,0.4); }
-  .ep-row.live .name::after {
-    content: "LIVE";
-    display: inline-block;
-    margin-left: 8px;
+  .section-label {
+    margin: 32px 0 10px;
     font-size: 10px;
-    letter-spacing: 0.18em;
-    padding: 2px 6px;
-    border-radius: 4px;
-    background: var(--accent);
-    color: #fff;
-    vertical-align: middle;
-  }
-  /* ---- Footer ---- */
-  footer {
-    text-align: center;
-    margin-top: 48px;
-    color: var(--ink-dim);
-    font-size: 11px;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.36em;
+    color: var(--muted);
     text-transform: uppercase;
   }
-  footer .quote {
-    color: var(--teal);
-    font-style: italic;
-    text-transform: none;
-    letter-spacing: 0;
-    margin-bottom: 14px;
-    font-size: 13px;
+  .schedule {
+    text-align: left;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-top: 10px;
+    background: rgba(0,0,0,0.25);
   }
-  @media (max-width: 380px) {
-    .feature h2 { font-size: 26px; }
+  .schedule .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed rgba(255,255,255,0.06);
+  }
+  .schedule .row:last-child { border-bottom: none; }
+  .schedule .ep-num { color: var(--accent); letter-spacing: 0.05em; }
+  .schedule .ep-date { color: var(--muted); font-size: 13px; }
+  .schedule .finale { color: #d9826a; font-weight: 500; }
+  .schedule .feature { color: #f1ece1; font-style: italic; }
+  .footer {
+    margin-top: 44px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
 </style>
 </head>
 <body>
-<main class="wrap">
+<div class="wrap">
 
-  <div class="brand-tag">Midnight Whisper<span class="dot"> ·</span> Hour</div>
-  <h1 class="brand">HORROR<span class="dot">.</span></h1>
-  <p class="strap">Original short films & shorts series. Watch with the lights off.</p>
+  <h1 class="brand">Midnight Whisper Hour</h1>
+  <p class="tagline">horror that whispers, not screams</p>
 
-  <!-- Featured: FRAGMENTS Ep 1 -->
-  <div class="feature">
-    <div class="meta">Episode 1 of 6 · Out now</div>
-    <h2>FRAGMENTS</h2>
-    <div class="sub">Lost in Fear</div>
-    <div class="ep">Something Under My Bed — 5 min horror short</div>
-    <a class="cta" href="https://youtu.be/TUtCEJo7SKE" target="_blank" rel="noopener">▶  Watch Episode 1 on YouTube</a>
+  <div class="next-drop">
+    <div class="label">next drop</div>
+    <div class="ep">FRAGMENTS — Episode 2</div>
+    <div class="ep">"Why Can't I Remember?"</div>
+    <div class="when">Friday, June 19 · 7 PM PT</div>
   </div>
 
-  <!-- Schedule -->
-  <div class="section-h">The series · monthly drops · halloween finale</div>
+  <div class="next-drop" style="border-color:#3a2a18; background:rgba(110,31,31,0.05);">
+    <div class="label" style="color:#d9826a;">then · episode three</div>
+    <div class="ep">"I Don't Think They Can See Me"</div>
+    <div class="when">Friday, July 24 · 7 PM PT — already in the can</div>
+  </div>
+
+  <a class="btn primary" href="https://youtube.com/@MidnightWhisperHour">
+    <span class="small">watch the series</span>
+    YouTube — full FRAGMENTS episodes
+  </a>
+
+  <a class="btn" href="https://www.tiktok.com/@midnightwhisperhour">
+    <span class="small">daily shorts</span>
+    TikTok · @midnightwhisperhour
+  </a>
+
+  <a class="btn" href="https://www.instagram.com/midnightwhisperhour">
+    <span class="small">daily reels</span>
+    Instagram · @midnightwhisperhour
+  </a>
+
+  <a class="btn primary" href="https://midnight-whisper-hour.creator-spring.com/">
+    <span class="small">EARLYBIRD · 10% OFF · FRAGMENTS collection</span>
+    Shop the merch · Creator Spring
+  </a>
+
+  <a class="btn" href="https://youtu.be/TUtCEJo7SKE">
+    <span class="small">catch up</span>
+    FRAGMENTS · Ep 1 — "What Happened Last Night?"
+  </a>
+
+  <div class="section-label">2026 release schedule</div>
   <div class="schedule">
-    <div class="ep-row live"><span class="num">EP 1</span><span class="name">Something Under My Bed</span><span class="when">May 2026</span></div>
-    <div class="ep-row"><span class="num">EP 2</span><span class="name">The Watcher</span><span class="when">June 2026</span></div>
-    <div class="ep-row"><span class="num">EP 3</span><span class="name">Coming soon</span><span class="when">July 2026</span></div>
-    <div class="ep-row"><span class="num">EP 4</span><span class="name">Coming soon</span><span class="when">August 2026</span></div>
-    <div class="ep-row"><span class="num">EP 5</span><span class="name">Coming soon</span><span class="when">September 2026</span></div>
-    <div class="ep-row"><span class="num">EP 6</span><span class="name">Finale</span><span class="when">Halloween 2026</span></div>
+    <div class="row"><span class="ep-num">Ep 1</span><span class="ep-date">May 22 — released</span></div>
+    <div class="row"><span class="ep-num">Ep 2</span><span class="ep-date">Friday, June 19 · banked</span></div>
+    <div class="row"><span class="ep-num">Ep 3</span><span class="ep-date">Friday, July 24 · banked</span></div>
+    <div class="row"><span class="ep-num">Ep 4</span><span class="ep-date">Friday, August 21</span></div>
+    <div class="row"><span class="ep-num">Ep 5</span><span class="ep-date">Friday, September 25</span></div>
+    <div class="row"><span class="ep-num finale">Ep 6 · finale</span><span class="ep-date finale">Friday, October 30</span></div>
+    <div class="row"><span class="feature">FRAGMENTS · the complete film</span><span class="ep-date">Saturday, Oct 31 · 7 PM PT</span></div>
   </div>
 
-  <!-- Other content -->
-  <div class="section-h">More horror · daily shorts</div>
-  <div class="links">
-    <a class="link" href="https://www.youtube.com/@MidnightWhisperHour/shorts" target="_blank" rel="noopener">
-      <span class="ico">🌙</span>
-      <span class="copy">
-        <div class="t">New short. Every night.</div>
-        <div class="d">Mannequins, smiling men, daylight lies & more — a new fragment of fear, 7 nights a week.</div>
-      </span>
-      <span class="arr">→</span>
-    </a>
-    <a class="link" href="https://www.youtube.com/@MidnightWhisperHour" target="_blank" rel="noopener">
-      <span class="ico">▶</span>
-      <span class="copy">
-        <div class="t">Subscribe on YouTube</div>
-        <div class="d">All episodes, all shorts series, never miss a drop</div>
-      </span>
-      <span class="arr">→</span>
-    </a>
-  </div>
+  <div class="footer">headphones up · lights off</div>
 
-  <!-- Socials -->
-  <div class="section-h">Follow · everywhere</div>
-  <div class="links">
-    <a class="link" href="https://www.tiktok.com/@midnightwhisperhour" target="_blank" rel="noopener">
-      <span class="ico">♪</span>
-      <span class="copy"><div class="t">TikTok</div><div class="d">@midnightwhisperhour</div></span>
-      <span class="arr">→</span>
-    </a>
-    <a class="link" href="https://www.instagram.com/midnightwhisperhour" target="_blank" rel="noopener">
-      <span class="ico">◉</span>
-      <span class="copy"><div class="t">Instagram</div><div class="d">@midnightwhisperhour</div></span>
-      <span class="arr">→</span>
-    </a>
-    <a class="link" href="https://www.facebook.com/midnightwhisperhour" target="_blank" rel="noopener">
-      <span class="ico">f</span>
-      <span class="copy"><div class="t">Facebook</div><div class="d">/midnightwhisperhour</div></span>
-      <span class="arr">→</span>
-    </a>
-  </div>
-
-  <footer>
-    <div class="quote">"Maybe my mind is doing what minds do when they're tired… Maybe."</div>
-    © Midnight Whisper Hour · All fiction · Sleep with the lights off
-  </footer>
-
-</main>
+</div>
 </body>
 </html>
